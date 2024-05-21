@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import styles from './internal.module.css';
-import Pagination from '@/components/Pagination';
+import Pagination from '../../components/Pagination';
 
 interface Lead {
   id: string;
