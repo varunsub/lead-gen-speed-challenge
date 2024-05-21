@@ -16,7 +16,7 @@ else
   exit 1
 fi
 
-cat <<EOF > /server/credentials.json
+cat <<EOF > ../credentials.json
 {
   "type": "${GCP_TYPE}",
   "project_id": "${GCP_PROJECT_ID}",
