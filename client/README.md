@@ -1,12 +1,13 @@
 
-USE NPM install to download the necessary packages
+# Next.js Frontend Setup
 
-Fill out the ENV variable. There is currently only one and it's just the backend API
+## Features
 
-By default his will be localhost:8000
+- **Next.js Frontend**
+- **Integration with FastAPI Backend**
 
-From there you can do NPM run dev locally
+## Step 1: Install Dependencies
 
-There are 3 routes total
+Use `npm` to install the necessary packages for the Next.js frontend app.
 
-Protetected
+1. Navigate to the frontend directory:   ```bash   cd frontend   ```2. Install the required packages:   ```bash   npm install   ```## Step 2: Environment SetupFill out the `.env` variable. There is currently only one, and it's just the backend API URL.By default, this will be `http://localhost:8000`.Create a `.env.local` file in the root of the `frontend` directory and add the following line:```NEXT_PUBLIC_API_URL=http://localhost:8000```## Step 3: Running the FrontendRun the development server locally using:```bashnpm run dev```This will run on `localhost:3000` by default.## Frontend RoutesThere are 3 main routes in this Next.js app:1. **Home Route (`/`)**   - This is the landing page of the application. It may include general information and navigation options to other parts of the app.   2. **Protected Route (`/protected`)**   - This route is protected and requires user authentication to access. It displays sensitive information or user-specific data.   3. **Login Route (`/login`)**   - This route allows users to log in to the application. It handles user authentication and redirects authenticated users to the protected route.## Additional DetailsMake sure to replace placeholders in the example `.env.local` file with actual values. Here is an example:```NEXT_PUBLIC_API_URL=http://localhost:8000```With these steps, you should be able to set up, run, and test the Next.js application locally.
