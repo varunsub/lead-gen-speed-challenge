@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import JSONResponse, RedirectResponse
-from fastapi.security import OAuth2PasswordRequestForm
 from app.core.security import authenticate_user, create_access_token
 from app.schemas import users as schema_users
-from fastapi import FastAPI, Form
+from fastapi import Form
 
 from app.db.database import get_db
 
@@ -24,6 +23,9 @@ async def login_for_access_token(
     access_token = create_access_token(data={"sub": user.email})
     response = JSONResponse(content={"auth_success": True})
     response.set_cookie(
-        key="Authorization", value=f"Bearer {access_token}", httponly=True
+        key="Authorization",
+        value=f"Bearer {access_token}",
+        httponly=True,
+        samesite="none",
     )
     return response
