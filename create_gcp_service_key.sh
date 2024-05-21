@@ -1,8 +1,22 @@
 #!/bin/bash
 
 echo "Creating GCP service key JSON file..."
-ls ||  echo
-cat <<EOF > ./server/credentials.json
+
+# Check current directory
+echo "Current directory: $(pwd)"
+
+# Create the directory if it doesn't exist
+mkdir -p /server
+
+# Verify if the directory was created
+if [ -d /server ]; then
+  echo "/server directory exists or was successfully created."
+else
+  echo "Failed to create /server directory."
+  exit 1
+fi
+
+cat <<EOF > /server/credentials.json
 {
   "type": "${GCP_TYPE}",
   "project_id": "${GCP_PROJECT_ID}",
@@ -17,4 +31,9 @@ cat <<EOF > ./server/credentials.json
 }
 EOF
 
-echo "GCP service key JSON file created at /server/credentials.json"
+# Check if the file was created
+if [ -f /server/credentials.json ]; then
+  echo "GCP service key JSON file created at /server/credentials.json"
+else
+  echo "Failed to create GCP service key JSON file."
+fi
