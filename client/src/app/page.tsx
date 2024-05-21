@@ -1,6 +1,8 @@
+// Home.tsx
 'use client'
 import { useState, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
+import './styles.css';
 require('dotenv').config()
 
 export default function Home() {
@@ -27,10 +29,11 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Submit a Lead</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
+          className="input"
           type="text"
           placeholder="First Name"
           value={firstName}
@@ -38,6 +41,7 @@ export default function Home() {
           required
         />
         <input
+          className="input"
           type="text"
           placeholder="Last Name"
           value={lastName}
@@ -45,6 +49,7 @@ export default function Home() {
           required
         />
         <input
+          className="input"
           type="email"
           placeholder="Email"
           value={email}
@@ -52,13 +57,14 @@ export default function Home() {
           required
         />
         <input
+          className="input"
           type="file"
           onChange={(e: ChangeEvent<HTMLInputElement>) => setResume(e.target.files![0])}
           required
         />
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </form>
-      <p>{message}</p>
+      <p className="message">{message}</p>
     </div>
   );
 }
