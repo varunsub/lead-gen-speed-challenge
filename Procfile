@@ -1,1 +1,1 @@
-web: uvicorn server.app.main:app --host 0.0.0.0 --port 8000
+web: cd server && uvicorn app.main:app --host 0.0.0.0 --port 8000
