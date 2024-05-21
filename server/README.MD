@@ -92,16 +92,16 @@ FROM_EMAIL=your_verified_email@example.com
 TO_EMAIL=attorney_email@example.com
 FRONTEND_URL=http://localhost:3000
 BUCKET_NAME=your_bucket_name
-GCP_TYPE="service_account"
-GCP_PROJECT_ID="your-project-id"
-GCP_PRIVATE_KEY_ID="your-private-key-id"
-GCP_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nyour-private-key\n-----END PRIVATE KEY-----\n"
-GCP_CLIENT_EMAIL="your-service-account-email@your-project-id.iam.gserviceaccount.com"
-GCP_CLIENT_ID="your-client-id"
-GCP_AUTH_URI="https://accounts.google.com/o/oauth2/auth"
-GCP_TOKEN_URI="https://oauth2.googleapis.com/token"
-GCP_AUTH_PROVIDER_X509_CERT_URL="https://www.googleapis.com/oauth2/v1/certs"
-GCP_CLIENT_X509_CERT_URL="https://www.googleapis.com/robot/v1/metadata/x509/your-service-account-email%40your-project-id.iam.gserviceaccount.com"
+type="service_account"
+project_id="your-project-id"
+private_key_id="your-private-key-id"
+private_key="-----BEGIN PRIVATE KEY-----\nyour-private-key\n-----END PRIVATE KEY-----\n"
+client_email="your-service-account-email@your-project-id.iam.gserviceaccount.com"
+client_id="your-client-id"
+auth_uri="https://accounts.google.com/o/oauth2/auth"
+token_uri="https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url="https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url="https://www.googleapis.com/robot/v1/metadata/x509/your-service-account-email%40your-project-id.iam.gserviceaccount.com"
 ```
 
 With these steps, you should be able to set up, run, and test the application locally.

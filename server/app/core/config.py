@@ -11,16 +11,16 @@ class Settings(BaseSettings):
     TO_EMAIL: str
     FRONTEND_URL: str
     BUCKET_NAME: str
-    GCP_TYPE: str
-    GCP_PROJECT_ID: str
-    GCP_PRIVATE_KEY_ID: str
-    GCP_PRIVATE_KEY: str
-    GCP_CLIENT_EMAIL: str
-    GCP_CLIENT_ID: str
-    GCP_AUTH_URI: str
-    GCP_TOKEN_URI: str
-    GCP_AUTH_PROVIDER_X509_CERT_URL: str
-    GCP_CLIENT_X509_CERT_URL: str
+    type: str
+    project_id: str
+    private_key_id: str
+    private_key: str
+    client_email: str
+    client_id: str
+    auth_uri: str
+    token_uri: str
+    auth_provider_x509_cert_url: str
+    client_x509_cert_url: str
 
     class Config:
         env_file = ".env"
