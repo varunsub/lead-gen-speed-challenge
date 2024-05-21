@@ -28,7 +28,7 @@ There are 3 main routes in this Next.js app:
    - This is the landing page of the application. It may include general information and navigation options to other parts of the app.
    
 2. **Protected Route (`/internal`)**
-   - This is a auth protected route that allows a user to mark a lead as non-pending.
+   - This is a auth protected route that allows a user to view leads and mark them as REACHED_OUT.
    
 3. **Login Route (`/login`)**
    - This route allows users to log in to the application. It handles user authentication and redirects authenticated users to the internal route.
