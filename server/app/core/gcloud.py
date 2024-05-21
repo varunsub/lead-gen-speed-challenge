@@ -25,7 +25,7 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name):
         )
 
         storage_client = storage.Client(
-            credentials=credentials, project=os.environ["GCP_PROJECT_ID"]
+            credentials=credentials, project=os.environ["project_id"]
         )
         bucket = storage_client.bucket(bucket_name)
         blob = bucket.blob(destination_blob_name)
