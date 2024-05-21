@@ -21,7 +21,7 @@ export default function Home() {
     formData.append('resume', resume!);
 
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/leads`, formData);
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/leads/`, formData);
       setMessage('Lead submitted successfully!');
     } catch (error) {
       setMessage('Error submitting lead.');
