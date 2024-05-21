@@ -5,6 +5,8 @@
 - **GCP Cloud Bucket File Upload**
 - **Postgres setup with SQLAlchemy ORM**
 - **API built on FastAPI**
+- **Sengrid for Email Sending**
+
 
 ## Step 1: Set up a VENV for Python
 
@@ -45,8 +47,9 @@ To run this app locally, you must use all the environment variables (env vars) w
 
 ## Running the App
 
-Run in development mode using:
-```cd ./server
+Navigate to the server directory from the root
+```bash
+cd ./server
 ```
 
 Run in development mode using:
