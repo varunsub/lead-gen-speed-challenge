@@ -5,17 +5,6 @@ echo "Creating GCP service key JSON file..."
 # Check current directory
 echo "Current directory: $(pwd)"
 
-# Create the directory if it doesn't exist
-mkdir -p /server
-
-# Verify if the directory was created
-if [ -d /server ]; then
-  echo "/server directory exists or was successfully created."
-else
-  echo "Failed to create /server directory."
-  exit 1
-fi
-
 cat <<EOF > ../credentials.json
 {
   "type": "${GCP_TYPE}",
