@@ -1,7 +1,6 @@
-from fastapi import APIRouter, Depends, HTTPException, Request, status, UploadFile, Form
+from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, Form
 from sqlalchemy import func
 from sqlalchemy.orm import Session
-from typing import List, Dict
 from uuid import UUID
 from app.crud import leads as crud_leads
 from app.schemas import users as schema_users, leads as schema_leads
@@ -26,6 +25,7 @@ async def create_lead(
     resume: UploadFile = Form(...),
     db: Session = Depends(get_db),
 ):
+    print("got here ran")
     resume_filename = f"{uuid.uuid4()}_{resume.filename}"
     resume_path = f"resumes/{resume_filename}"
     with open(resume_path, "wb") as buffer:
