@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Creating GCP service key JSON file..."
-
-cat <<EOF > /server/credentials.json
+ls ||  echo
+cat <<EOF > ./server/credentials.json
 {
   "type": "${GCP_TYPE}",
   "project_id": "${GCP_PROJECT_ID}",
