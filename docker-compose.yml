@@ -1,16 +1,6 @@
 version: '3.8'
 
 services:
-  web:
-    build:
-      context: ./client
-      dockerfile: dockerfile
-    command: npm start
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-
   backend:
     build:
       context: ./server

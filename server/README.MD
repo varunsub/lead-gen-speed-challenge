@@ -35,7 +35,7 @@ uvicorn app.main:app --reload
 
 This will run on localhost:8000 by default
 
-You can then add leads by filling out the form
+You can then add leads by filling out the form and running the client app
 
 You can then visit the route /login
 

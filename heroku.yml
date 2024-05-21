@@ -1,6 +1,5 @@
 build:
   docker:
-    web: client/dockerfile
     backend: server/dockerfile
   scripts:
     postdeploy: ./create_gcp_service_key.sh
@@ -10,5 +9,4 @@ release:
     - echo "Release phase script running"
 
 run:
-  web: npm --prefix client start
   backend: uvicorn server.app.main:app --host 0.0.0.0 --port 8000
