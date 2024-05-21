@@ -34,9 +34,12 @@ async def create_lead(
     gcs_url = upload_to_gcs(
         os.environ.get("BUCKET_NAME"), resume_path, f"resumes/{resume_filename}"
     )
+    print(gcs_url)
+    if not gcs_url:
+        raise HTTPException(status_code=500, detail="Failed to upload resume")
 
     lead = await crud_leads.create_lead(db, first_name, last_name, email, gcs_url)
-
+    print(lead)
     subject = "Thank you for your submission"
     prospect_email_content = f"""
     <p>Dear {first_name} {last_name},</p>

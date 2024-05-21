@@ -4,7 +4,6 @@
 ## Features
 
 - **Next.js Frontend**
-- **Integration with FastAPI Backend**
 
 ## Step 1: Install Dependencies
 

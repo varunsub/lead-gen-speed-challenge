@@ -6,6 +6,7 @@
 - **Postgres setup with SQLAlchemy ORM**
 - **API built on FastAPI**
 - **Sengrid for Email Sending**
+- **Next.js Frontend**
 
 
 ## Step 1: Set up a VENV for Python

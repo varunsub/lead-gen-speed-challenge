@@ -13,3 +13,4 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name):
         return blob.public_url
     except Exception as e:
         print(e)
+        return ""
