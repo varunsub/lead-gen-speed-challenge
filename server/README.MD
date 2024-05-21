@@ -44,7 +44,7 @@ To run this app locally, you must use all the environment variables (env vars) w
 - `TO_EMAIL`: Email of the attorney who will be contacting these leads
 - `FRONTEND_URL`: URL of the client for CORS purposes
 - `BUCKET_NAME`: Bucket path/directory for uploading the resumes/CV
-- `GOOGLE_APPLICATION_CREDENTIALS`: Path to GCP Service key in `.json` file. This file should be in the root of the server directory
+
 
 ## Running the App
 
@@ -92,7 +92,16 @@ FROM_EMAIL=your_verified_email@example.com
 TO_EMAIL=attorney_email@example.com
 FRONTEND_URL=http://localhost:3000
 BUCKET_NAME=your_bucket_name
-GOOGLE_APPLICATION_CREDENTIALS=./path_to_your_gcp_service_key.json
+GCP_TYPE="service_account"
+GCP_PROJECT_ID="your-project-id"
+GCP_PRIVATE_KEY_ID="your-private-key-id"
+GCP_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nyour-private-key\n-----END PRIVATE KEY-----\n"
+GCP_CLIENT_EMAIL="your-service-account-email@your-project-id.iam.gserviceaccount.com"
+GCP_CLIENT_ID="your-client-id"
+GCP_AUTH_URI="https://accounts.google.com/o/oauth2/auth"
+GCP_TOKEN_URI="https://oauth2.googleapis.com/token"
+GCP_AUTH_PROVIDER_X509_CERT_URL="https://www.googleapis.com/oauth2/v1/certs"
+GCP_CLIENT_X509_CERT_URL="https://www.googleapis.com/robot/v1/metadata/x509/your-service-account-email%40your-project-id.iam.gserviceaccount.com"
 ```
 
 With these steps, you should be able to set up, run, and test the application locally.
