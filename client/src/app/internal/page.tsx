@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import styles from './Internal.module.css'; // Assuming you have a CSS module file
-// import { usePagination } from '@/hooks/usePagination';
+import styles from './internal.module.css';
 import Pagination from '@/components/Pagination';
 
 interface Lead {
@@ -31,7 +30,7 @@ export default function Internal() {
         });
         setLeads(response.data.leads);
         setTotal(response.data.total);
-      } catch (error) {
+      } catch (error: any) {
         setMessage('Failed to fetch leads.');
         if (error.response?.status === 401) {
           router.push('/login');
@@ -53,7 +52,7 @@ export default function Internal() {
         lead.id === leadId ? {...lead, state: "REACHED_OUT"} : lead
       ));
       setMessage(`Lead ${leadId} updated successfully.`);
-    } catch (error) {
+    } catch (error: any) {
       setMessage('Failed to update lead state.');
       if (error.response?.status === 401) {
         router.push('/login');
