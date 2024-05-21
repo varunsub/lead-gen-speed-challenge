@@ -1,1 +1,1 @@
-web: cd server && uvicorn app.main:app --host=0.0.0.0 --port=${PORT}
+web: cd server && mkdir resumes && uvicorn app.main:app --host=0.0.0.0 --port=${PORT}
